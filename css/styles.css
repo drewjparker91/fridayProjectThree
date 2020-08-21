@@ -2,10 +2,25 @@
   display: none;
 }
 
+#results {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
 .jumbotron {
   margin-bottom: 0px;
   background-color: black;
   color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.form-group {
+  font-size: xx-large;
+  margin-bottom: 0px;
+}
+
+#inputNumber {
+  font-size: xx-large;
 }
 
 body {
