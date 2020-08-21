@@ -1,70 +1,52 @@
-$(document).ready(function() {
-  $("#numberForm").submit(function() {
-  event.preventDefault();
-  let userNum = parseInt($("#inputNumber").val());
-    // Get user input
-    
+function displayResults(result) {
+  $("#results").text(result);
+  $("#results").show();
+}
 
+$(document).ready(function () {
+  $("#numberForm").submit(function () {
+    event.preventDefault();
 
+    // Get num
+    let userNum = parseInt($("#inputNumber").val());
+    // check if num too large
 
-    // Looping Logic
-    let outputArray = []
+    console.log("Before big num check");
 
-    for (let i=0; i <= userNum; i++){
-      let asString = i.toString();
-      if (asString.includes("3")){
-      outputArray.push("Won't you be my neighbor");
-      }else if (asString.includes("2")){
-      outputArray.push("Boop!"); 
-      }else if (asString.includes("1")){
-      outputArray.push("Beep!"); 
-        }else{
-        outputArray.push(i);   
-      }
-      
-      
+    if (userNum > 1000) {
+      displayResults("Mr. Roboger can't count above 1000 or he will break!");
+      return;
+    } else if (userNum < 0) {
+      displayResults("Mr. Roboger only works with positive numbers!");
+      return;
     }
 
-    // Display Results
-    
-    $("#outputText").text(outputArray);
-    $("#outputText").show();
-  })
-})
+    // Construct output array
+    let outputArray = [];
+    for (let i = 0; i <= userNum; i++) {
+      let asString = i.toString();
+      if (asString.includes("3")) {
+        outputArray.push("Won't you be my neighbor");
+      } else if (asString.includes("2")) {
+        outputArray.push("Boop!");
+      } else if (asString.includes("1")) {
+        outputArray.push("Beep!");
+      } else {
+        outputArray.push(i);
+      }
+    }
 
+    // Display Output Array
+    // $("#results").text(outputArray);
+    // $("#results").show();
+    displayResults(outputArray);
+  });
+});
 
+// GOAL: create error messages
 
-
- 
-
-
-
-// GOAL: convert userNumber into an array from 0-userNumber
-
-
-// GOAL: replace 1 with beep! | replace 2 with boop! | replace 3 with "wont you be my neighbor"
-
-// const userNum = 7
-// let outputArray = []
-// for (let i=0; index <= userNum; i++) {
-//   console.log('>>>' + i)
-
-//}
-  // if a number in usernum.length .includes(3)
-  // .push "won't you be my neighbor" to outputArray
-  // else if a number in userArray .includes(2)
-  // .push "boop!" to outputArray
-  // else if a number in userArray .includes(1)
-  // .push "beep!" to outputArray
-  // else if the number contains none of the numbers, push back original number in UserArray
-
-
-
-
-  // GOAL: create error messages
-
-  // if userNumber is Nan 
-  // else if user number is empty
-  // return "Whoops! Thats not a number! Please enter a number!"
-  // else usernumber is over 1000
-  // return "Mr Roboto can only count to 10000!"
+// if userNumber is Nan
+// else if user number is empty
+// return "Whoops! Thats not a number! Please enter a number!"
+// else usernumber is over 1000
+// return "Mr Roboto can only count to 10000!"

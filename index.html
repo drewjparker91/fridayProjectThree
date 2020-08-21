@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="js/jquery-3.5.1.js"></script>
-  <script src="js/scripts.js"></script>
-  <title>Mr. Roboger's Neighborhood</title>
-</head>
-<body>
-  <h1 class="jumbotron">Mr. Roboger's Neighborhood!</h1>
-  <form id=numberForm class="well">
-    <div class="form-group">
-      <label for="inputNumber">Enter a number!</label>
-      <input type="number" id="inputNumber" class="form-control" step = "any"><br>
-    </div>
-    <button type="submit" class ="btn btn-success" id="btnDefault">Submit!</button>
-  </form>
-  <div id="output">
-    <p id="outputText"></p>
-    <button id="tryAgain" class="btn btn-danger">Try Again!</button>
-  </div>
-</body>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Mr. Roboger's Neighborhood</title>
+  </head>
+  <body>
+    <h1 class="jumbotron">Mr. Roboger's Neighborhood!</h1>
+    <form id="numberForm" class="well">
+      <div class="form-group">
+        <label for="inputNumber">Enter a number!</label>
+        <input
+          type="number"
+          id="inputNumber"
+          class="form-control"
+          step="any"
+        /><br />
+      </div>
+      <button type="submit" class="btn btn-success" id="btnDefault">
+        Submit!
+      </button>
+    </form>
+
+    <p id="results"></p>
+  </body>
+</html>
