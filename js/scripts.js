@@ -31,7 +31,13 @@ for (let i=0; index <= userArray.length; i++)
   else if the number contains none of the numbers, push back original number in UserArray
 
 
-  
+  GOAL: create error messages
+
+  if userNumber is Nan 
+  else if user number is empty
+  return "Whoops! Thats not a number! Please enter a number!"
+  else usernumber is over 1000
+  return "Hey neighbor, enter a smaller number, i can't count past 1000!"
 
 
 
