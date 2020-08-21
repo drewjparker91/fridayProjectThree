@@ -4,7 +4,8 @@
 
 .jumbotron {
   margin-bottom: 0px;
-  background-color: teal;
+  background-color: black;
+  color: white;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
 }
 
 h4 {
+  margin-top: 175px;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
   animation-name: spin;
@@ -28,10 +30,3 @@ h4 {
     transform: rotate(360deg);
   }
 }
-
-/* h4
-animation: fontchange 5s infinite;
-
-@keyframes fontchange {
-  50% {
-    font-size: 40px; */
