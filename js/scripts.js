@@ -1,8 +1,9 @@
 $(document).ready(function() {
   $("#numberForm").submit(function() {
   event.preventDefault();
+  let userNum = parseInt($("#inputNumber").val());
     // Get user input
-    let userNum = parseInt($("#inputNumber").val());
+    
 
 
 
@@ -13,15 +14,19 @@ $(document).ready(function() {
       let asString = i.toString();
       if (asString.includes("3")){
       outputArray.push("Won't you be my neighbor");
-      }else{
+      }else if (asString.includes("2")){
+      outputArray.push("Boop!"); 
+      }else if (asString.includes("1")){
+      outputArray.push("Beep!"); 
+        }else{
         outputArray.push(i);   
       }
-      console.log('>>> ' + asString);
       
       
     }
 
     // Display Results
+    
     $("#outputText").text(outputArray);
     $("#outputText").show();
   })
