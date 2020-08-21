@@ -14,11 +14,24 @@ body {
 h4 {
   text-align: center;
   font-family: "Courier New", Courier, monospace;
-  animation: fontchange 5s infinite;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* h4
+animation: fontchange 5s infinite;
 
 @keyframes fontchange {
   50% {
-    font-size: 40px;
-  }
-}
+    font-size: 40px; */
