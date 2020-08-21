@@ -8,9 +8,17 @@ $(document).ready(function() {
 
     // Looping Logic
     let outputArray = []
-    for (let i=0; i <= userNum; i++) {
-      console.log('>>>' + i);
-      outputArray.push(i);
+
+    for (let i=0; i <= userNum; i++){
+      let asString = i.toString();
+      if (asString.includes("3")){
+      outputArray.push("Won't you be my neighbor");
+      }else{
+        outputArray.push(i);   
+      }
+      console.log('>>> ' + asString);
+      
+      
     }
 
     // Display Results
